@@ -9,7 +9,7 @@ import random
 #==============================#
 
 TITULO = "Batallas RPG"
-VERSION = "0.0.4"
+VERSION = "0.0.5"
 
 #==============================#
 # FUNCIONES DE INTERFAZ (UI)
@@ -17,6 +17,30 @@ VERSION = "0.0.4"
 
 def impr_titulo_version():
   print(f"{TITULO} v{VERSION}\n")
+
+def impr_instrucciones():
+  print(f"¡Bienvenido a las {TITULO}!\n\nPara comenzar elige una raza\n")
+
+def seleccionar_raza():
+
+  while True:
+
+    try:
+
+      print(MENU_INTERACTIVO)
+      raza = int(input("\n¿Qué raza eliges?: "))
+
+      if 1 <= raza <= len(RAZAS):
+        raza_elegida = RAZAS[raza - 1]
+        print(f"Elegiste {raza_elegida}")
+        return raza_elegida
+
+      else:
+        print(f"Ingresa un número entre 1 y {len(RAZAS)}\n")
+
+    except ValueError:
+      print(f"\nIngresa un número entre 1 y {len(RAZAS)}\n")
+
 
 #==============================#
 # CLASSES
@@ -34,6 +58,9 @@ class Raza:
     self._defensa_max = defensa_max
     self._velocidad_min = velocidad_min
     self._velocidad_max = velocidad_max
+
+  def __str__(self):
+    return self.nombre
 
   def aplicar_bonus(self, personaje):
     bonus_vida = random.randint(self._vida_min, self._vida_max)
@@ -131,3 +158,30 @@ class Orco(Raza):
 
   def habilidad_racial(self):
     pass
+
+#==============================#
+# CONFIGURACIÓN DEL SISTEMA
+#==============================#
+
+RAZAS = [Humano(), Elfo(), Enano(), Orco()]
+
+MENU = []
+
+for indice, raza in enumerate (RAZAS, 1):
+  texto = f"{indice}. {raza.nombre}"
+  MENU.append(texto)
+
+MENU_INTERACTIVO = "\n".join(MENU)
+
+#==============================#
+# ENTRY POINT
+#==============================#
+
+def main():
+
+  impr_titulo_version()
+  impr_instrucciones()
+  seleccionar_raza()
+
+if __name__ == "__main__":
+  main()
