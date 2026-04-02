@@ -9,7 +9,7 @@ import random
 #==============================#
 
 TITULO = "Batallas RPG"
-VERSION = "0.0.2"
+VERSION = "0.0.3"
 
 #==============================#
 # FUNCIONES DE INTERFAZ (UI)
