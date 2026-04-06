@@ -11,6 +11,14 @@ import random
 TITULO = "Batallas RPG"
 VERSION = "0.0.5"
 
+
+STATS_BASE = {
+    "vida": 100,
+    "ataque": 10,
+    "defensa": 10,
+    "velocidad": 10
+}
+
 #==============================#
 # FUNCIONES DE INTERFAZ (UI)
 #==============================#
@@ -32,7 +40,7 @@ def seleccionar_raza():
 
       if 1 <= raza <= len(RAZAS):
         raza_elegida = RAZAS[raza - 1]
-        print(f"Elegiste {raza_elegida}")
+        print(f"\nElegiste {raza_elegida}")
         return raza_elegida
 
       else:
@@ -79,17 +87,28 @@ class Raza:
 
 class Personaje:
   
-  def __init__(self, nombre, nivel, vida, vida_max, ataque, defensa, velocidad, raza):
+  def __init__(self, nombre, raza):
     self.nombre = nombre
-    self._nivel = nivel
-    self._vida = vida
-    self._vida_max = vida_max
-    self._ataque = ataque
-    self._defensa = defensa
-    self._velocidad = velocidad
+    self._nivel = 1
     self.raza = raza
 
+    self._vida_max = STATS_BASE["vida"]
+    self._vida = STATS_BASE["vida"]
+    self._ataque = STATS_BASE["ataque"]
+    self._defensa = STATS_BASE["defensa"]
+    self._velocidad = STATS_BASE["velocidad"]
+
     self.raza.aplicar_bonus(self)
+
+  def mostrar_stats(self):
+    print("\n====================")
+    print(f"{self.nombre} ({self.raza})")
+    print(f"Nivel: {self._nivel}")
+    print(f"Vida: {self._vida}/{self._vida_max}")
+    print(f"Ataque: {self._ataque}")
+    print(f"Defensa: {self._defensa}")
+    print(f"Velocidad: {self._velocidad}")
+    print("====================\n")
 
   def atacar(self, objetivo):
     pass
@@ -98,7 +117,7 @@ class Personaje:
     pass
 
   def esta_vivo(self):
-    pass
+    return self._vida > 0
 
   def subir_nivel(self):
     pass
@@ -181,7 +200,11 @@ def main():
 
   impr_titulo_version()
   impr_instrucciones()
-  seleccionar_raza()
+
+  raza = seleccionar_raza()
+  jugador = Personaje("Jugador", raza)
+
+  jugador.mostrar_stats()
 
 if __name__ == "__main__":
   main()
