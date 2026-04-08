@@ -32,7 +32,7 @@ def seleccionar_raza():
 
       if 1 <= raza <= len(RAZAS):
         raza_elegida = RAZAS[raza - 1]
-        print(f"Elegiste {raza_elegida}")
+        print(f"\nElegiste {raza_elegida}\n")
         return raza_elegida
 
       else:
