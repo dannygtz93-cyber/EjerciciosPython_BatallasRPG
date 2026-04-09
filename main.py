@@ -2,7 +2,7 @@
 # INPUTS
 #==============================#
 
-from src.config.config import TITULO, VERSION
+from src.config.config import TITULO, __version__
 from src.config.razas import RAZAS, MENU_INTERACTIVO
 from src.personajes.personajes import Personaje, crear_enemigo
 
@@ -11,7 +11,7 @@ from src.personajes.personajes import Personaje, crear_enemigo
 #==============================#
 
 def impr_titulo_version():
-  print(f"{TITULO} v{VERSION}\n")
+  print(f"{TITULO} v{__version__}\n")
 
 def impr_instrucciones():
   print(f"¡Bienvenido a las {TITULO}!\n\nPara comenzar elige una raza\n")

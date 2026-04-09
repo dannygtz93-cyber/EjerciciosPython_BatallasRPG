@@ -1,10 +1,13 @@
 #==============================#
-# VARIABLES GLOBLES
+# TITULO Y VERSIÓN
 #==============================#
 
 TITULO = "Batallas RPG"
-VERSION = "0.0.8"
+__version__ = "0.0.9"
 
+#==============================#
+# CONFIGURACION DEL JUEGO
+#==============================#
 
 STATS_BASE = {
     "vida": 100,
