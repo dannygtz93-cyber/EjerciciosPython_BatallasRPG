@@ -3,8 +3,8 @@
 #==============================#
 
 import random
-from razas import RAZAS
-from config import STATS_BASE
+from src.config.razas import RAZAS
+from src.config.config import STATS_BASE
 
 #==============================#
 # CLASSES Y FUNCIONES

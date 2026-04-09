@@ -2,9 +2,9 @@
 # INPUTS
 #==============================#
 
-from config import TITULO, VERSION
-from razas import RAZAS, MENU_INTERACTIVO
-from personajes import Personaje, crear_enemigo
+from src.config.config import TITULO, VERSION
+from src.config.razas import RAZAS, MENU_INTERACTIVO
+from src.personajes.personajes import Personaje, crear_enemigo
 
 #==============================#
 # FUNCIONES DE INTERFAZ (UI)
