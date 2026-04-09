@@ -28,3 +28,41 @@ Thumbs.db
 
 # Archivos compilados
 *.pyc
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Entornos virtuales
+venv/
+env/
+.venv/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Archivos de IDE
+.vscode/
+.idea/
+
+# Archivos temporales
+*.log
+*.tmp
+
+# Testing
+.pytest_cache/
+.coverage
+
+# Distribución
+build/
+dist/
+*.egg-info/
+
+# Entorno
+.env
