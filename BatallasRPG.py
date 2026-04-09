@@ -9,7 +9,7 @@ import random
 #==============================#
 
 TITULO = "Batallas RPG"
-VERSION = "0.0.6"
+VERSION = "0.0.7"
 
 
 STATS_BASE = {
@@ -100,16 +100,6 @@ class Personaje:
 
     self.raza.aplicar_bonus(self)
 
-  def mostrar_stats(self):
-    print("\n====================")
-    print(f"{self.nombre} ({self.raza})")
-    print(f"Nivel: {self._nivel}")
-    print(f"Vida: {self._vida}/{self._vida_max}")
-    print(f"Ataque: {self._ataque}")
-    print(f"Defensa: {self._defensa}")
-    print(f"Velocidad: {self._velocidad}")
-    print("====================\n")
-
   def atacar(self, objetivo):
     pass
   
@@ -121,6 +111,25 @@ class Personaje:
 
   def subir_nivel(self):
     pass
+
+  def mostrar_stats(self):
+    print("\n====================")
+    print(f"{self.nombre} ({self.raza})")
+    print(f"Nivel: {self._nivel}")
+    print(f"Vida: {self._vida}/{self._vida_max}")
+    print(f"Ataque: {self._ataque}")
+    print(f"Defensa: {self._defensa}")
+    print(f"Velocidad: {self._velocidad}")
+    print("====================\n")
+
+def crear_enemigo():
+  raza = random.choice(RAZAS)
+  enemigo = Personaje("Enemigo", raza)
+
+  print("\n¡Un enemigo aparece!")
+  enemigo.mostrar_stats()
+
+  return enemigo
 
 class Humano(Raza):
 
@@ -205,6 +214,10 @@ def main():
   jugador = Personaje("Jugador", raza)
 
   jugador.mostrar_stats()
+  
+  enemigo = crear_enemigo()
+
+  input("\nPresiona Enter para salir...")
 
 if __name__ == "__main__":
   main()
