@@ -1,5 +1,10 @@
 # 🎮 Batallas RPG en Python
 
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Version](https://img.shields.io/badge/version-0.0.8-green)
+![Status](https://img.shields.io/badge/status-development-orange)
+![License](https://img.shields.io/badge/license-MIT-lightgrey)
+
 Proyecto de RPG por consola desarrollado en Python como ejercicio de Programación Orientada a Objetos (POO) y arquitectura modular.
 
 ---
