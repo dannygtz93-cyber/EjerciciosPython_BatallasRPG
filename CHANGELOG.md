@@ -7,6 +7,13 @@ MAJOR.MINOR.PATCH
 
 ---
 
+## [0.1.0] - 2026-04-09
+
+### Agregado
+- Implementar sistema de combate base
+
+---
+
 ## [0.0.9] - 2026-04-09
 
 ### Cambios

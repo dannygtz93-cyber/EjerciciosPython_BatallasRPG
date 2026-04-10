@@ -26,10 +26,23 @@ class Personaje:
     self.raza.aplicar_bonus(self)
 
   def atacar(self, objetivo):
-    pass
+    
+    daño = self._ataque
+
+    print(f"{self.nombre} ({self.raza}) ataco con {daño} de daño")
+
+    objetivo.recibir_daño(daño)
+
   
   def recibir_daño(self, daño):
-    pass
+
+    self._vida -= daño
+
+    if self._vida < 0:
+      self._vida = 0
+
+    print(f"{self.nombre} ({self.raza}) recibió {daño} de daño")
+    print(f"Vida restante: {self._vida}")
 
   def esta_vivo(self):
     return self._vida > 0
@@ -53,5 +66,6 @@ def crear_enemigo():
 
   print("\n¡Un enemigo aparece!")
   enemigo.mostrar_stats()
+  input("\nPresiona Enter para continuar...")
 
   return enemigo

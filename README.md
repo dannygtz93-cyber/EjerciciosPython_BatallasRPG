@@ -1,7 +1,7 @@
 # 🎮 Batallas RPG en Python
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue)
-![Version](https://img.shields.io/badge/version-0.0.9-green)
+![Version](https://img.shields.io/badge/version-0.1.0-green)
 ![Status](https://img.shields.io/badge/status-development-orange)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
@@ -12,7 +12,7 @@ Proyecto de RPG por consola desarrollado en Python como ejercicio de Programaci�
 # 📌 Estado del Proyecto
 
 🚧 En desarrollo activo
-📦 Versión actual: **0.0.9**
+📦 Versión actual: **0.1.0**
 
 El proyecto se encuentra en fase inicial de desarrollo, construyendo la base para un RPG escalable.
 
@@ -92,7 +92,7 @@ python main.py
 ## 0.1.0
 
 * Modularización completa
-* Sistema de combate mejorado
+* Sistema de combate base
 
 ## 0.2.0
 
@@ -124,7 +124,7 @@ MAJOR.MINOR.PATCH
 Ejemplo:
 
 ```
-0.0.8
+0.1.0
 ```
 
 ---

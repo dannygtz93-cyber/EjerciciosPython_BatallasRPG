@@ -5,6 +5,7 @@
 from src.config.config import TITULO, __version__
 from src.config.razas import RAZAS, MENU_INTERACTIVO
 from src.personajes.personajes import Personaje, crear_enemigo
+from src.combate.combate import iniciar_combate
 
 #==============================#
 # FUNCIONES DE INTERFAZ (UI)
@@ -49,8 +50,11 @@ def main():
   jugador = Personaje("Jugador", raza)
 
   jugador.mostrar_stats()
+  input("\nPresiona Enter para continuar...")
   
   enemigo = crear_enemigo()
+
+  iniciar_combate(jugador, enemigo)
 
   input("\nPresiona Enter para salir...")
 
