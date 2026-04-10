@@ -10,7 +10,15 @@ MAJOR.MINOR.PATCH
 ## [0.1.0] - 2026-04-09
 
 ### Agregado
-- Implementar sistema de combate base
+- Sistema de combate base
+- Lógica de batalla inicial
+
+### Mejoras
+- Integración con sistema de personajes
+- Estructura modular
+
+### Notas
+Primera versión jugable del RPG
 
 ---
 
