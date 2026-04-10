@@ -3,7 +3,7 @@
 #==============================#
 
 from src.config.config import TITULO, __version__
-from src.config.razas import RAZAS, MENU_INTERACTIVO
+from src.personajes.razas import RAZAS, MENU_INTERACTIVO
 from src.personajes.personajes import Personaje, crear_enemigo
 from src.combate.combate import iniciar_combate
 

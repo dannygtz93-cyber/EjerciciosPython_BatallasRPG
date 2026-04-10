@@ -7,6 +7,18 @@ MAJOR.MINOR.PATCH
 
 ---
 
+## [0.1.1] - 2026-04-09
+
+### Cambios
+- Reorganización de arquitectura
+- Movimiento de `razas.py` al módulo `personajes`
+
+### Refactor
+- Mejora en organización del código de personajes
+- Preparación para expansión de razas y clases
+
+---
+
 ## [0.1.0] - 2026-04-09
 
 ### Agregado

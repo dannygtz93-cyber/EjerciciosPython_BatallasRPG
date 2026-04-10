@@ -3,7 +3,7 @@
 #==============================#
 
 import random
-from src.config.razas import RAZAS
+from src.personajes.razas import RAZAS
 from src.config.config import STATS_BASE
 
 #==============================#
